@@ -1,23 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      <table class="header">
+        <th>
+      <h1> Calculadora de Pedido de Hambúrguer </h1>
+      </th>
+      </table>
+
+      <p> Cardápio de Hambúrguers </p>
+
+      <table class="burguin">
+        <tr>
+          <th class="ths">
+            Nome do Hambúrguer
+          </th>
+          <th class="ths">
+              Preço
+          </th>
+        </tr>
+            <td>
+              Cheeseburguer
+            </td>
+            <td>
+              R$ 25.00
+            </td>
+        <tr>
+            <td>
+              Bacon Burguer
+            </td>
+            <td>
+              R$ 30.00
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+              Veggie Burguer
+            </td>
+            <td>
+              R$ 28.00
+            </td>
+        </tr>
+      </table>
     </div>
   );
 }
