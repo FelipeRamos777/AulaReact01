@@ -13,8 +13,8 @@ function App() {
 
   const cardapio = [Hamb1,Hamb2,Hamb3];
 
-  const[hambSelecionado, setHambSelecionado] = useState(0);
-  const[servico, setServico] = useState(0);
+  const[hambSelecionado, setHambSelecionado] = useState(-1);
+  const[servico, setServico] = useState(-1);
   const[quantidade, setQuantidade] = useState(0);
   const[resultado, setResultado] = useState(null);
 
@@ -83,7 +83,7 @@ function App() {
           Escolha seu Hambúrguer <br />
           <select value={hambSelecionado}
           onChange={ (e) => setHambSelecionado(e.target.value)} >
-          <option value="1"> Selecione um Hambúrguer</option>
+          <option value="-1"> Selecione um Hambúrguer</option>
 
           {cardapio.map(
             (hamb,indice) => (
@@ -98,7 +98,7 @@ function App() {
           Escolha o Tipo de Serviço <br />
           <select value={servico}
           onChange={ (e) => setServico(e.target.value)} >
-          <option value="1"> Selecione um Serviço</option>
+          <option value="-1"> Selecione um Serviço</option>
 
           {tiposervico.map(
             (Taxa,indice) => (
@@ -109,11 +109,19 @@ function App() {
             )
           )}
           </select>
+          <p>
+            Digite a quantidade <br />
+            <input type="Number" value={quantidade}
+            onChange={(e) => setQuantidade(e.target.value)} />
+          </p>
+
+          <p>
+            <input type="button" value="Processar Pedido" onClick={calcular} />
+          </p>
         </form>
 
+        {resultado}
     </div>
-
-    
   );
 }
 
