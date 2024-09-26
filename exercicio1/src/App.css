@@ -9,23 +9,32 @@ h1,h3{
 }
 td{
   border: 1px solid black;
-  padding-left: 8px;
+  padding-left: 11px;
 }
 .header{
   background-color: brown;
   align-items: center;
   width: 100%;
 }
-p{
+.pp{
   color: brown;
   text-align: center;
   font-weight: bold;
 }
+.servico{
+  border: 1px solid black;
+  align-items: center;
+  width: 220px;
+  height: 120px;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
 .burguin{
   border: 1px solid black;
   align-items: center;
-  width: 265px;
-  height: 110px;
+  width: 280px;
+  height: 170px;
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
@@ -35,5 +44,6 @@ p{
   background-color: brown;
   color: white;
   border: 1px solid black;
+
   
 }
