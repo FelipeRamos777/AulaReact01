@@ -19,7 +19,33 @@ function App() {
   const[resultado, setResultado] = useState(null);
 
   function calcular(){
+          const indice = Number(hambSelecionado);
+          const indices = Number(servico);
 
+          if (indice < 0)
+          {
+           setResultado(
+            <div className='resultado'>
+              Não Há Hambúrguer selecionado !
+            </div>
+           )
+          }
+          else 
+          {
+          const hamb = cardapio[indice];
+          const serv = tiposervico[indices];
+          const total = (quantidade * hamb.preco) + serv.preco;
+
+          setResultado(
+            <div className='resultado'>
+            <b> Hambúrguer:</b>  {hamb.nome} <br />
+            <b>Quantidade:</b> {quantidade} <br />
+            <b>Preço:</b> R$ {hamb.preco.toFixed(2)} <br />
+            <b>Serviço:</b> {serv.nome} <br />
+            <b>Total:</b> R$ {total.toFixed(2)}
+            </div>
+          )
+          }
   }
   return (
     <div>
